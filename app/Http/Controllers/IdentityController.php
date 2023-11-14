@@ -28,7 +28,7 @@ class IdentityController extends Controller
         ]);
     }
 
-    public function store(Request $request)
+    public function store(IdentityRequest $request)
     {
     
         $data = $request->only([
@@ -51,7 +51,7 @@ class IdentityController extends Controller
         return view('common.edit', compact('identity'));
     }
 
-    public function update(Request $request, $id)
+    public function update(IdentityRequest $request, $id)
     {
         $data = $request->only([
             'fullname', 'nickname', 'gender', 'place_of_birth', 'date_of_birth',

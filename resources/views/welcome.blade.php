@@ -21,8 +21,8 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
             @foreach ($identity as $item)
+            <tr>
                 <td>{{ $loop->iteration }}</td>
                 <td>{{ $item->fullname }}</td>
                 <td>{{ $item->nickname }}</td>
@@ -30,11 +30,13 @@
                 <td>
                     <a href="{{ route('identities.show', $item->id) }}" class="btn btn-primary">View</a>
                 </td>
+            </tr>
             @endforeach
-        </tr>
     </tbody>
-    {{ $identity->links() }}
 </table>
+<div class="d-flex justify-content-center">
+    {!! $identity->links('vendor.pagination.bootstrap-5') !!}
+</div>  
 
 
 

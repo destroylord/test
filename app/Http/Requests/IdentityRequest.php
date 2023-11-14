@@ -45,7 +45,7 @@ class IdentityRequest extends FormRequest
             'gender' => 'Kolom jenis kelamin',
             'place_of_birth' => 'Kolom tempat lahir',
             'date_of_birth' => 'Kolom tanggal lahir',
-            'nationality' => 'Kolom kewarganegaraan',
+            'nationality' => 'Kolom kebangsaan/suku',
             'region' => 'Kolom wilayah',
             'last_education' => 'Kolom pendidikan terakhir',
             'major' => 'Kolom jurusan',
@@ -58,7 +58,7 @@ class IdentityRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'required' => 'Kolom :attribute harus diisi.',
+            'required' => ':attribute harus diisi.',
         ];
     }
 }
